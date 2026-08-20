@@ -17,11 +17,27 @@
             </a>
         </div>
         <div class="navbar-links">
-            <a href="#inicio">Início</a>
             <a href="#noivas">Noivas</a>
             <a href="#madrinhas">Madrinhas</a>
-            <a href="#noivos">Noivos</a>
             <a href="#debutantes">Debutantes</a>
+            <a href="#noivos">Noivos</a>
+            <form class="barrapesquisa" id="formBusca" role="search">
+                <label class="visually-hidden" for="campoBusca">Pesquisar categoria</label>
+                <input type="search" id="campoBusca" class="campopesquisa" placeholder="O que você procura?" autocomplete="off">
+                <button type="submit" class="botaopesquisa" aria-label="Pesquisar">
+                    <img src="assets/icons/search.png" alt="">
+                </button>
+            </form>
+            <div class="icone-perfil">
+                <a href="#minhaconta">
+                    <img src="assets/icons/user.png" alt="Minha Conta" class="icone-minhaconta"/>
+                </a>
+            </div>
+            <div class="icone-compras">
+                <a href="#checkout">
+                    <img src="assets/icons/bag.png" alt="Sacola de Compras" class="icone-bag"/>
+                </a>
+            </div>
         </div>
     </nav>
     <main>
@@ -33,5 +49,6 @@
     <footer class="footer">
         <p>© 2026 Coletivo6. Todos os direitos reservados.</p>
     </footer>
+    <script src="js/search.js"></script>
 </body>
 </html>
