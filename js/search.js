@@ -11,7 +11,7 @@ formBusca.addEventListener('submit', (event) => {
     event.preventDefault();
 
     const termo = normalizar(campoBusca.value);
-    const categorias = [...document.querySelectorAll('.navbar-links > a[href^="#"]')];
+    const categorias = [...document.querySelectorAll('.navbar-links > a')];
     const destino = categorias.find((link) => {
         const categoria = normalizar(link.textContent);
         return categoria.includes(termo) || termo.includes(categoria.replace(/s$/, ''));
@@ -26,7 +26,7 @@ formBusca.addEventListener('submit', (event) => {
     }
 
     campoBusca.setCustomValidity('');
-    document.querySelector(destino.getAttribute('href'))?.scrollIntoView({ behavior: 'smooth' });
+    destino.click();
 });
 
 campoBusca.addEventListener('input', () => campoBusca.setCustomValidity(''));

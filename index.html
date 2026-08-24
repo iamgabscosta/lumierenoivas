@@ -8,19 +8,23 @@
     <link rel="stylesheet" href="css/debutantes.css">
     <link rel="stylesheet" href="css/noivas.css">
     <link rel="stylesheet" href="css/noivos.css">
+    <link rel="stylesheet" href="css/contact.css">
 </head>
 <body id="inicio">
     <nav class="navbar">
         <div class="navbar-logo">
-            <a href="#inicio">
+            <a href="index.html" aria-label="Voltar para a página inicial">
                 <img src="assets/logo/logo.png" alt="Logo Lumière Noivas">
             </a>
         </div>
         <div class="navbar-links">
-            <a href="#noivas">Noivas</a>
-            <a href="#madrinhas">Madrinhas</a>
-            <a href="#debutantes">Debutantes</a>
-            <a href="#noivos">Noivos</a>
+            <a href="#noivas" data-section="sections/noivas.html">Noivas</a>
+            <a href="#madrinhas" data-section="sections/madrinhas.html">Madrinhas</a>
+            <a href="#debutantes" data-section="sections/debutantes.html">Debutantes</a>
+            <a href="#noivos" data-section="sections/noivos.html">Noivos</a>
+            <a href="#contato" data-section="sections/contact.html">Contato</a>
+        </div>
+        <div class="navbar-acoes">
             <form class="barrapesquisa" id="formBusca" role="search">
                 <label class="visually-hidden" for="campoBusca">Pesquisar categoria</label>
                 <input type="search" id="campoBusca" class="campopesquisa" placeholder="O que você procura?" autocomplete="off">
@@ -29,26 +33,23 @@
                 </button>
             </form>
             <div class="icone-perfil">
-                <a href="#minhaconta">
+                <a href="#minhaconta" data-section="sections/minhaconta.html">
                     <img src="assets/icons/user.png" alt="Minha Conta" class="icone-minhaconta"/>
                 </a>
             </div>
             <div class="icone-compras">
-                <a href="#checkout">
+                <a href="#checkout" data-section="sections/checkout.html">
                     <img src="assets/icons/bag.png" alt="Sacola de Compras" class="icone-bag"/>
                 </a>
             </div>
         </div>
     </nav>
-    <main>
-        <section id="noivas"></section>
-        <section id="madrinhas"></section>
-        <section id="noivos"></section>
-        <section id="debutantes"></section>
+    <main id="conteudoPrincipal" tabindex="-1">
     </main>
     <footer class="footer">
         <p>© 2026 Coletivo6. Todos os direitos reservados.</p>
     </footer>
+    <script src="js/loadSections.js"></script>
     <script src="js/search.js"></script>
 </body>
 </html>
