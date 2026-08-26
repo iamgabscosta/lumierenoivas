@@ -19,7 +19,7 @@
             <input type="tel" id="telefone" name="telefone" placeholder="Digite seu Telefone" required>
         </div>
         <div class="input-group">
-            <label for="ondevoceconheceLumiere">*Aonde você conheceu a Lumière Noivas?</label>
+            <label for="ondevoceconheceLumiere">Aonde você conheceu a Lumière Noivas?</label>
             <select id="ondevoceconheceLumiere" name="ondevoceconheceLumiere" required>
                 <option value="" selected disabled hidden>Selecione uma opção</option>
                 <option value="instagram">Instagram</option>
@@ -38,11 +38,11 @@
             <input type="tel" id="telefoneIndicacao" name="telefoneIndicacao" placeholder="Digite o telefone da pessoa">
         </div>
         <div class="input-group" data-campo-outros hidden>
-            <label for="outraOrigem">*Especifique:</label>
+            <label for="outraOrigem">Especifique:</label>
             <input type="text" id="outraOrigem" name="outraOrigem" placeholder="Conte onde conheceu a Lumière Noivas">
         </div>
         <div class="input-group">
-            <label for="assunto">*Assunto:</label>
+            <label for="assunto">Assunto:</label>
             <input type="text" id="assunto" name="assunto" placeholder="Digite o Assunto" required>
         </div>
         <div class="input-group">
@@ -52,8 +52,34 @@
                 <button type="submit" class="botaoenviar">Enviar Mensagem</button>
             </form>
         </div>
-        <div class="navegacaogoogle">
+        <div>
             <h2 class="titulonavegacao">Localização</h2>
+            <div class="mapbox">
+                <iframe
+                src="https://www.google.com/maps?q=Lumi%C3%A8re+Noivas,+R.+Francisca+de+Melo,+54,+Centro,+Nova+Igua%C3%A7u,+RJ,+26210-270&z=17&t=h&output=embed"
+                style="border:0; border-radius:12px;"
+                allowfullscreen
+                loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin">
+                </iframe>
+            </div>
+            <div class="redessociais">
+                <h2 class="tituloredesocial">Redes Sociais</h2>
+                <div class="iconesredessociais">
+                    <a href="https://www.facebook.com/lumierenoivas">
+                        <img src="assets/redessociais/facebook.png" alt="Facebook" class="iconredesocial">
+                    </a>
+                    <a href="https://www.instagram.com/lumierenoivas">
+                        <img src="assets/redessociais/instagram.png" alt="Instagram" class="iconredesocial">
+                    </a>
+                    <a href="https://www.tiktok.com/@lumierenoivas">
+                        <img src="assets/redessociais/tiktok.png" alt="TikTok" class="iconredesocial">
+                    </a>
+                    <a href="">
+                        <img src="assets/redessociais/whatsapp.png" alt="WhatsApp" class="iconredesocial">
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 </section>
