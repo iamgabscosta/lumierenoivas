@@ -1,9 +1,11 @@
 <section>
     <h1 class="titulocontato">Fale Conosco</h1>
     <p class="textocontato">Nesta página estão listadas as formas de contato com a nossa loja.</p>
-    <h2 class="tituloformulario">Formulário de Contato</h2>
-    <p class="textoformulario">Os campos marcados com * são obrigatórios para o envio da mensagem.</p>
-    <form action="#" method="POST">
+    <div class="conteudo-contato">
+        <div class="coluna-formulario">
+            <h2 class="tituloformulario">Formulário de Contato</h2>
+            <p class="textoformulario">Os campos marcados com * são obrigatórios para o envio da mensagem.</p>
+            <form action="#" method="POST">
         <div class="input-group">
             <label for="nome">*Nome:</label>
             <input type="text" id="nome" name="nome" placeholder="Digite seu Nome/Sobrenome" required>
@@ -23,9 +25,21 @@
                 <option value="instagram">Instagram</option>
                 <option value="facebook">Facebook</option>
                 <option value="google">Google</option>
-                <option value="indicação">Indicação</option>
+                <option value="indicacao">Indicação</option>
                 <option value="outros">Outros</option>
             </select>
+        </div>
+        <div class="input-group" data-campo-indicacao hidden>
+            <label for="nomeIndicacao">*Nome de quem indicou:</label>
+            <input type="text" id="nomeIndicacao" name="nomeIndicacao" placeholder="Digite o nome da pessoa">
+        </div>
+        <div class="input-group" data-campo-indicacao hidden>
+            <label for="telefoneIndicacao">*Telefone de quem indicou:</label>
+            <input type="tel" id="telefoneIndicacao" name="telefoneIndicacao" placeholder="Digite o telefone da pessoa">
+        </div>
+        <div class="input-group" data-campo-outros hidden>
+            <label for="outraOrigem">*Especifique:</label>
+            <input type="text" id="outraOrigem" name="outraOrigem" placeholder="Conte onde conheceu a Lumière Noivas">
         </div>
         <div class="input-group">
             <label for="assunto">*Assunto:</label>
@@ -35,6 +49,11 @@
             <label for="mensagem">Mensagem:</label>
             <textarea id="mensagem" name="mensagem" placeholder="Digite sua Mensagem" required></textarea>
         </div>
-        <button type="submit" class="botaoenviar">Enviar Mensagem</button>
-    </form>
+                <button type="submit" class="botaoenviar">Enviar Mensagem</button>
+            </form>
+        </div>
+        <div class="navegacaogoogle">
+            <h2 class="titulonavegacao">Localização</h2>
+        </div>
+    </div>
 </section>

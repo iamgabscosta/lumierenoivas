@@ -1,6 +1,32 @@
 const conteudoPrincipal = document.querySelector('#conteudoPrincipal');
 const linksDeSecao = [...document.querySelectorAll('[data-section]')];
 
+function configurarCamposIndicacao() {
+    const origemContato = conteudoPrincipal.querySelector('#ondevoceconheceLumiere');
+    const camposIndicacao = [...conteudoPrincipal.querySelectorAll('[data-campo-indicacao]')];
+    const camposOutros = [...conteudoPrincipal.querySelectorAll('[data-campo-outros]')];
+
+    if (!origemContato) return;
+
+    function alternarCampos(campos, mostrar) {
+        campos.forEach((grupo) => {
+            grupo.hidden = !mostrar;
+            const campo = grupo.querySelector('input');
+            campo.required = mostrar;
+
+            if (!mostrar) campo.value = '';
+        });
+    }
+
+    function atualizarCamposIndicacao() {
+        alternarCampos(camposIndicacao, origemContato.value === 'indicacao');
+        alternarCampos(camposOutros, origemContato.value === 'outros');
+    }
+
+    origemContato.addEventListener('change', atualizarCamposIndicacao);
+    atualizarCamposIndicacao();
+}
+
 async function carregarSecao(link, atualizarHistorico = true) {
     const arquivo = link.dataset.section;
     const titulo = link.querySelector('img')?.alt || link.textContent.trim();
@@ -21,6 +47,7 @@ async function carregarSecao(link, atualizarHistorico = true) {
                 <p>Conteúdo em breve.</p>
             </section>
         `;
+        configurarCamposIndicacao();
 
         linksDeSecao.forEach((item) => item.removeAttribute('aria-current'));
         link.setAttribute('aria-current', 'page');

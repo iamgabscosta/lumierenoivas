@@ -13,13 +13,36 @@
 }
 
 .tituloformulario {
-    font-size: 18px;
-    margin: 0px max(10px, calc((100% - 1400px) / 2)) 0;
+    font-size: 25px;
+    margin: 30px max(10px, calc((100% - 1400px) / 2)) 0;
 }
 
 .textoformulario {
     font-size: 16px;
     margin: 0px max(10px, calc((100% - 1400px) / 2)) 0;
+}
+
+.conteudo-contato {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 40px;
+    width: min(1400px, calc(100% - 20px));
+    margin: 30px auto 0;
+    align-items: start;
+}
+
+.conteudo-contato .tituloformulario,
+.conteudo-contato .titulonavegacao,
+.conteudo-contato .textoformulario {
+    margin: 0;
+}
+
+.conteudo-contato .input-group {
+    margin: 10px 0 0;
+}
+
+.conteudo-contato .botaoenviar {
+    margin: 20px 0 0;
 }
 
 .input-group {
@@ -29,19 +52,24 @@
 
 .input-group label {
     font-size: 16px;
+    padding: 0;
 }
 
-.input-group input, select {
+.input-group input,
+.input-group select {
     display: block;
     font-size: 16px;
     width: 400px;
     max-width: 100%;
-    margin-top: 5px;
-    padding: 8px;
+    padding: 10px;
     background-color: #f3f3f3;
     border: 1px solid #929292;
     border-radius: 10px;
     box-sizing: border-box;
+}
+
+.input-group[hidden] {
+    display: none;
 }
 
 .input-group textarea {
@@ -50,13 +78,25 @@
     width: 400px;
     max-width: 100%;
     height: 100px;
-    margin-top: 5px;
     padding: 8px;
+    background-color: #f3f3f3;
+    border: 1px solid #929292;
     box-sizing: border-box;
-    resize: vertical;
+    resize: none;
+    border-radius: 10px;
 }
 
 .botaoenviar {
     font-size: 16px;
     margin: 20px max(10px, calc((100% - 1400px) / 2)) 0;
+}
+
+.titulonavegacao {
+    font-size: 25px;
+}
+
+@media (max-width: 520px) {
+    .conteudo-contato {
+        grid-template-columns: 1fr;
+    }
 }
