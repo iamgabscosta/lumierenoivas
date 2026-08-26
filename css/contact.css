@@ -12,9 +12,11 @@
     margin: 0px max(10px, calc((100% - 1400px) / 2)) 0;
 }
 
-.tituloformulario {
+.tituloformulario,
+.titulonavegacao {
     font-size: 25px;
-    margin: 30px max(10px, calc((100% - 1400px) / 2)) 0;
+    font-weight: 600;
+    line-height: 1.2;
 }
 
 .textoformulario {
@@ -25,16 +27,19 @@
 .conteudo-contato {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 40px;
+    gap: clamp(40px, 6vw, 96px);
     width: min(1400px, calc(100% - 20px));
     margin: 30px auto 0;
     align-items: start;
 }
 
 .conteudo-contato .tituloformulario,
-.conteudo-contato .titulonavegacao,
-.conteudo-contato .textoformulario {
+.conteudo-contato .titulonavegacao {
     margin: 0;
+}
+
+.conteudo-contato .textoformulario {
+    margin: 4px 0 0;
 }
 
 .conteudo-contato .input-group {
@@ -68,6 +73,14 @@
     box-sizing: border-box;
 }
 
+.input-group input:focus,
+.input-group select:focus,
+.input-group textarea:focus {
+    border-color: #DFA907;
+    outline: 2px solid rgba(223, 169, 7, 0.2);
+    outline-offset: 1px;
+}
+
 .input-group[hidden] {
     display: none;
 }
@@ -89,10 +102,6 @@
 .botaoenviar {
     font-size: 16px;
     margin: 20px max(10px, calc((100% - 1400px) / 2)) 0;
-}
-
-.titulonavegacao {
-    font-size: 25px;
 }
 
 @media (max-width: 520px) {
