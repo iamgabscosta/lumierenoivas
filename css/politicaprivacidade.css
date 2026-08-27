@@ -1,0 +1,10 @@
+.footer a[href="#politicaprivacidade"] {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer a[href="#politicaprivacidade"]:hover,
+.footer a[href="#politicaprivacidade"][aria-current="page"] {
+    color: #DFA907;
+}

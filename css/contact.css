@@ -1,41 +1,45 @@
 .titulocontato {
     font-size: 2.5rem;
-    margin: 20px max(10px, calc((100% - 1400px) / 2)) 0;
-    padding: 0 0 0px;
+    line-height: 1.2;
+    width: min(1400px, calc(100% - 40px));
+    margin: 20px auto 0;
+    padding-bottom: 4px;
     border-bottom: 1px solid #dadada;
     display: block;
     text-align: left;
 }
 
 .textocontato {
-    font-size: 16px;
-    margin: 0px max(10px, calc((100% - 1400px) / 2)) 0;
-}
-
-.tituloformulario,
-.titulonavegacao,
-.tituloredesocial {
-    font-size: 25px;
-    font-weight: 600;
-    line-height: 1.2;
+    font-size: 15px;
+    line-height: 1.5;
+    width: min(1400px, calc(100% - 40px));
+    margin: 6px auto 0;
 }
 
 .textoformulario {
-    font-size: 16px;
-    margin: 0px max(10px, calc((100% - 1400px) / 2)) 0;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.tituloformulario,
+.titulolocalizacao,
+.tituloredesocial {
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.2;
 }
 
 .conteudo-contato {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: clamp(40px, 6vw, 96px);
-    width: min(1400px, calc(100% - 20px));
+    width: min(1400px, calc(100% - 40px));
     margin: 30px auto 0;
     align-items: start;
 }
 
 .conteudo-contato .tituloformulario,
-.conteudo-contato .titulonavegacao,
+.conteudo-contato .titulolocalizacao,
 .conteudo-contato .tituloredesocial {
     margin: 0;
 }
@@ -57,20 +61,20 @@
 }
 
 .input-group {
-    font-size: 16px;
-    margin: 10px max(10px, calc((100% - 1400px) / 2)) 0;
+    font-size: 15px;
+    margin: 10px 0 0;
 }
 
 .input-group label {
-    font-size: 16px;
+    font-size: 15px;
     padding: 0;
 }
 
 .input-group input,
 .input-group select {
     display: block;
-    font-size: 16px;
-    width: 400px;
+    font-size: 15px;
+    width: 420px;
     max-width: 100%;
     padding: 10px;
     background-color: #f3f3f3;
@@ -94,7 +98,7 @@
 .input-group textarea {
     display: block;
     font-size: 16px;
-    width: 400px;
+    width: 420px;
     max-width: 100%;
     height: 100px;
     padding: 8px;
@@ -107,13 +111,15 @@
 
 .botaoenviar {
     font-size: 16px;
-    margin: 20px max(10px, calc((100% - 1400px) / 2)) 0;
+    margin: 20px 0 0;
+    width: 150px;
+    padding: 5px;
 }
 
 .mapbox {
     width: 100%;
     height: 450px;
-    margin-top: 0px;
+    margin-top: 8px;
 }
 
 .mapbox iframe {
@@ -125,8 +131,8 @@
 }
 
 .iconredesocial {
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
     display: block;
 }
 
