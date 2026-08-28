@@ -1,0 +1,10 @@
+.footer a[href="#trocasdevolucoes"] {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer a[href="#trocasdevolucoes"]:hover,
+.footer a[href="#trocasdevolucoes"][aria-current="page"] {
+    color: #DFA907;
+}

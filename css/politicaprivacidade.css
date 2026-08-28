@@ -8,3 +8,28 @@
 .footer a[href="#politicaprivacidade"][aria-current="page"] {
     color: #DFA907;
 }
+
+.titulopolitica {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    width: min(1400px, calc(100% - 40px));
+    margin: 20px auto 0;
+    padding-bottom: 4px;
+    border-bottom: 1px solid #dadada;
+    display: block;
+    text-align: left;
+}
+
+.conteudo-politica {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(40px, 6vw, 96px);
+    width: min(1400px, calc(100% - 40px));
+    margin: 30px auto 0;
+    align-items: start;
+}
+
+.conteudo-politica p {
+    font-size: 15px;
+    text-align: justify;
+}

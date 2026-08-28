@@ -1,0 +1,10 @@
+.footer a[href="#termosdeuso"] {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer a[href="#termosdeuso"]:hover,
+.footer a[href="#termosdeuso"][aria-current="page"] {
+    color: #DFA907;
+}

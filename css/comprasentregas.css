@@ -1,0 +1,10 @@
+.footer a[href="#comprasentregas"] {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer a[href="#comprasentregas"]:hover,
+.footer a[href="#comprasentregas"][aria-current="page"] {
+    color: #DFA907;
+}
