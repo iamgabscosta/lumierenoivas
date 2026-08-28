@@ -8,3 +8,46 @@
 .footer a[href="#termosdeuso"][aria-current="page"] {
     color: #DFA907;
 }
+
+.titulotermos {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    width: min(1400px, calc(100% - 40px));
+    margin: 40px auto 0;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #dadada;
+    display: block;
+    text-align: left;
+}
+
+.titulo {
+    font-size: 1.5rem;
+    width: 100%;
+    margin: 0;
+    padding-bottom: 0;
+    display: block;
+    text-align: left;
+}
+
+.conteudo-termos {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: min(1400px, calc(100% - 40px));
+    margin: 28px auto 60px;
+}
+
+.conteudo-termos p {
+    font-size: 16px;
+    text-align: justify;
+}
+
+.lista-termos {
+    padding-left: 26px;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.lista-termos li {
+    padding-left: 0px;
+}
