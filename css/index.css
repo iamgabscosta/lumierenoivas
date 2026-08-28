@@ -8,7 +8,16 @@
 }
 
 html {
-    scroll-behavior: smooth;
+    scroll-behavior: auto;
+}
+
+html.pagina-sem-scrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+html.pagina-sem-scrollbar::-webkit-scrollbar {
+    display: none;
 }
 
 section {

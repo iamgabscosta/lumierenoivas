@@ -30,7 +30,14 @@ function configurarCamposIndicacao() {
 async function carregarSecao(link, atualizarHistorico = true) {
     const arquivo = link.dataset.section;
     const titulo = link.querySelector('img')?.alt || link.textContent.trim();
+    const paginaSemBarra = [
+        '#politicaprivacidade',
+        '#termosdeuso',
+        '#comprasentregas',
+        '#trocasdevolucoes'
+    ].includes(link.hash);
 
+    document.documentElement.classList.toggle('pagina-sem-scrollbar', paginaSemBarra);
     conteudoPrincipal.setAttribute('aria-busy', 'true');
 
     try {
@@ -41,6 +48,7 @@ async function carregarSecao(link, atualizarHistorico = true) {
         }
 
         const html = await resposta.text();
+        window.scrollTo(0, 0);
         conteudoPrincipal.innerHTML = html.trim() || `
             <section class="secao-vazia">
                 <h1>${titulo}</h1>
@@ -55,9 +63,7 @@ async function carregarSecao(link, atualizarHistorico = true) {
         if (atualizarHistorico) {
             history.pushState({ secao: link.hash }, '', link.hash);
         }
-
         conteudoPrincipal.focus({ preventScroll: true });
-        conteudoPrincipal.scrollIntoView({ behavior: 'smooth', block: 'start' });
     } catch (erro) {
         conteudoPrincipal.innerHTML = `
             <section class="secao-erro" role="alert">
