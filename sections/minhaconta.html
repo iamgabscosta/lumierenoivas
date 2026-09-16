@@ -1,0 +1,71 @@
+<section class="minha-conta" aria-labelledby="tituloMinhaConta">
+    <h1 id="tituloMinhaConta">Minha Conta</h1>
+    <div class="contas-colunas">
+        <section class="cartao-conta" aria-labelledby="tituloLogin">
+            <h2 id="tituloLogin">Entrar</h2>
+            <p>Entre com seus dados para acessar sua conta.</p>
+            <form class="form-conta" id="formLogin" action="#" method="post">
+                <div>
+                    <label for="emailLogin">E-mail</label>
+                    <input id="emailLogin" name="email" type="email" autocomplete="email" required>
+                </div>
+                <div>
+                    <label for="senhaLogin">Senha</label>
+                    <input id="senhaLogin" name="senha" type="password" autocomplete="current-password" required>
+                </div>
+                <button class="link-conta" id="abrirRecuperarSenha" type="button">Esqueci minha senha</button>
+                <button type="submit">Entrar</button>
+                <p class="mensagem-conta" id="mensagemLogin" role="status"></p>
+            </form>
+        </section>
+
+        <section class="cartao-conta" aria-labelledby="tituloCriarConta">
+            <h2 id="tituloCriarConta">Criar conta</h2>
+            <p>Cadastre-se para acompanhar seus pedidos e facilitar suas compras.</p>
+            <form class="form-conta" id="formCadastro" action="#" method="post">
+                <div>
+                    <label for="nomeCadastro">Nome completo</label>
+                    <input id="nomeCadastro" name="nome" type="text" autocomplete="name" required>
+                </div>
+                <div>
+                    <label for="emailCadastro">E-mail</label>
+                    <input id="emailCadastro" name="email" type="email" autocomplete="email" required>
+                </div>
+                <div>
+                    <label for="telefoneCadastro">Telefone</label>
+                    <input id="telefoneCadastro" name="telefone" type="tel" autocomplete="tel" required>
+                </div>
+                <div>
+                    <label for="senhaCadastro">Crie uma senha</label>
+                    <input id="senhaCadastro" name="senha" type="password" autocomplete="new-password" minlength="8" required>
+                </div>
+                <div>
+                    <label for="confirmarSenhaCadastro">Confirme sua senha</label>
+                    <input id="confirmarSenhaCadastro" name="confirmarSenha" type="password" autocomplete="new-password" minlength="8" required>
+                </div>
+                <label class="lembrar-conta" for="aceitarTermos">
+                    <input id="aceitarTermos" name="termos" type="checkbox" required>
+                    Li e aceito os Termos de Uso e a Política de Privacidade.
+                </label>
+                <button id="botaoCriarConta" type="submit" disabled>Criar conta</button>
+                <p class="mensagem-conta" id="mensagemCadastro" role="status"></p>
+            </form>
+        </section>
+    </div>
+    <dialog class="dialog-recuperar-senha" id="dialogRecuperarSenha" aria-labelledby="tituloRecuperarSenha">
+        <form class="form-recuperar-senha" id="formRecuperarSenha">
+            <div class="cabecalho-dialogo">
+                <h2 id="tituloRecuperarSenha">Recuperar senha</h2>
+                <button class="fechar-dialogo" id="fecharRecuperarSenha" type="button" aria-label="Fechar">×</button>
+            </div>
+            <p>Informe seu e-mail para receber as instruções de recuperação.</p>
+            <label for="emailRecuperacao">E-mail</label>
+            <input id="emailRecuperacao" name="email" type="email" autocomplete="email" required>
+            <p class="mensagem-conta" id="mensagemRecuperacao" role="status"></p>
+            <div class="acoes-dialogo">
+                <button class="botao-secundario" id="cancelarRecuperacao" type="button">Cancelar</button>
+                <button type="submit">Enviar instruções</button>
+            </div>
+        </form>
+    </dialog>
+</section>

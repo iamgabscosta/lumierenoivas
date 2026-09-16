@@ -1,0 +1,232 @@
+.minha-conta {
+    width: min(1400px, calc(100% - 40px));
+    margin: 40px auto 60px;
+}
+
+.minha-conta > h1 {
+    margin-bottom: 24px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #dadada;
+    font-size: 2.5rem;
+    line-height: 1.2;
+}
+
+.contas-colunas {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 48px;
+    align-items: start;
+}
+
+.cartao-conta + .cartao-conta {
+    padding-left: 48px;
+    border-left: 1px solid #dadada;
+}
+
+.cartao-conta h2 {
+    font-size: 1.5rem;
+    line-height: 1.2;
+}
+
+.cartao-conta > p {
+    margin-top: 6px;
+    color: #5f5f5f;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.form-conta {
+    display: grid;
+    gap: 14px;
+    margin-top: 24px;
+}
+
+.form-conta > div {
+    display: grid;
+    gap: 6px;
+}
+
+.form-conta label {
+    font-size: 15px;
+}
+
+.form-conta input:not([type="checkbox"]) {
+    width: min(100%, 350px);
+    min-height: 42px;
+    padding: 10px 12px;
+    border: 1px solid #929292;
+    border-radius: 8px;
+    background: #f3f3f3;
+    font-size: 16px;
+}
+
+.form-conta input:focus {
+    border-color: #DFA907;
+    outline: 2px solid rgba(223, 169, 7, 0.2);
+    outline-offset: 1px;
+}
+
+.lembrar-conta {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    line-height: 1.4;
+}
+
+.lembrar-conta input {
+    width: 16px;
+    height: 16px;
+    margin-top: 2px;
+    accent-color: #DFA907;
+}
+
+.link-conta {
+    width: fit-content;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: #7a5a00;
+    font-size: 14px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.mensagem-conta {
+    min-height: 1.4em;
+    color: #4f4f4f;
+    font-size: 14px;
+}
+
+.form-conta button {
+    width: 200px;
+    padding: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.form-conta .link-conta {
+    width: fit-content;
+    min-height: auto;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: #7a5a00;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.form-conta .link-conta:hover {
+    background: transparent;
+    color: #4f3a00;
+}
+
+.form-conta button:disabled {
+    cursor: not-allowed;
+}
+
+.dialog-recuperar-senha {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: min(440px, calc(100% - 40px));
+    max-height: calc(100dvh - 40px);
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 10px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.22);
+    transform: translate(-50%, -50%);
+}
+
+.dialog-recuperar-senha::backdrop {
+    background: rgba(0, 0, 0, 0.35);
+}
+
+.form-recuperar-senha {
+    display: grid;
+    gap: 14px;
+    padding: 24px;
+}
+
+.cabecalho-dialogo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cabecalho-dialogo h2 {
+    font-size: 1.5rem;
+}
+
+.fechar-dialogo {
+    width: 34px;
+    height: 34px;
+    border: 0;
+    background: transparent;
+    font-size: 28px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.form-recuperar-senha > p {
+    color: #5f5f5f;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.form-recuperar-senha > label {
+    font-size: 15px;
+}
+
+.form-recuperar-senha input {
+    width: 100%;
+    min-height: 42px;
+    padding: 10px 12px;
+    border: 1px solid #929292;
+    border-radius: 8px;
+    background: #f3f3f3;
+    font-size: 16px;
+}
+
+.form-recuperar-senha input:focus {
+    border-color: #DFA907;
+    outline: 2px solid rgba(223, 169, 7, 0.2);
+    outline-offset: 1px;
+}
+
+.acoes-dialogo {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.acoes-dialogo button {
+    width: 150px;
+    min-height: auto;
+    padding: 5px;
+    border: 1px solid #929292;
+    border-radius: 0;
+    background: #ffffff;
+    color: #000000;
+    font-size: 15px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.acoes-dialogo .botao-secundario {
+    background: #ffffff;
+}
+
+@media (max-width: 720px) {
+    .contas-colunas {
+        grid-template-columns: 1fr;
+        gap: 36px;
+    }
+
+    .cartao-conta + .cartao-conta {
+        padding-top: 36px;
+        padding-left: 0;
+        border-top: 1px solid #dadada;
+        border-left: 0;
+    }
+}

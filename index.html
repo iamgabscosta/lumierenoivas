@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="css/termosdeuso.css">
     <link rel="stylesheet" href="css/comprasentregas.css">
     <link rel="stylesheet" href="css/trocasdevolucoes.css">
+    <link rel="stylesheet" href="css/carrinho.css">
+    <link rel="stylesheet" href="css/minhaconta.css">
 </head>
 <body id="inicio">
     <nav class="navbar">
@@ -42,9 +44,9 @@
                 </a>
             </div>
             <div class="icone-compras">
-                <a href="#checkout" data-section="sections/checkout.html">
-                    <img src="assets/icons/bag.png" alt="Sacola de Compras" class="icone-bag"/>
-                </a>
+                <button class="botao-sacola" id="abrirSacola" type="button" aria-label="Abrir sacola de compras" aria-controls="painelSacola" aria-expanded="false">
+                    <img src="assets/icons/bag.png" alt="" class="icone-bag">
+                </button>
             </div>
         </div>
     </nav>
@@ -58,7 +60,28 @@
             <a href="#trocasdevolucoes" data-section="sections/trocasdevolucoes.html">Trocas e Devoluções</a> 
         </p>
     </footer>
+    <div class="fundo-sacola" id="fundoSacola" hidden></div>
+    <aside class="painel-sacola" id="painelSacola" aria-labelledby="tituloSacola" aria-hidden="true">
+        <header class="cabecalho-sacola">
+            <h2 id="tituloSacola">Sacola</h2>
+            <button class="fechar-sacola" id="fecharSacola" type="button" aria-label="Fechar sacola">×</button>
+        </header>
+        <div class="conteudo-sacola">
+            <p class="sacola-vazia" id="sacolaVazia">Carrinho vazio</p>
+            <ul class="lista-sacola" id="listaSacola" aria-live="polite"></ul>
+        </div>
+        <footer class="rodape-sacola">
+            <div class="resumo-sacola">
+                <span>Total</span>
+                <strong id="totalSacola">R$ 0,00</strong>
+            </div>
+            <button class="botao-checkout" id="irParaCheckout" type="button" disabled>Ir para checkout</button>
+        </footer>
+    </aside>
+    <a class="visually-hidden" id="linkCheckout" href="#checkout" data-section="sections/checkout.html">Ir para checkout</a>
+    <script src="js/minhaconta.js"></script>
     <script src="js/loadSections.js"></script>
     <script src="js/search.js"></script>
+    <script src="js/carrinho.js"></script>
 </body>
 </html>

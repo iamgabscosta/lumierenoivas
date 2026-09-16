@@ -1,0 +1,162 @@
+.botao-sacola {
+    display: grid;
+    place-items: center;
+    padding: 6px;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+}
+
+.botao-sacola:focus-visible,
+.fechar-sacola:focus-visible,
+.botao-checkout:focus-visible,
+.item-sacola-controle:focus-visible {
+    outline: 2px solid #DFA907;
+    outline-offset: 2px;
+}
+
+.fundo-sacola {
+    position: fixed;
+    z-index: 1100;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.25);
+}
+
+.painel-sacola {
+    position: fixed;
+    z-index: 1101;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    width: min(100%, 440px);
+    height: 100dvh;
+    padding: 20px;
+    background: #ffffff;
+    box-shadow: -6px 0 20px rgba(0, 0, 0, 0.16);
+    transform: translateX(100%);
+    transition: transform 0.25s ease;
+}
+
+.painel-sacola.aberto {
+    transform: translateX(0);
+}
+
+.cabecalho-sacola {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.cabecalho-sacola h2 {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.fechar-sacola {
+    width: 36px;
+    height: 36px;
+    border: 0;
+    background: transparent;
+    font-size: 30px;
+    font-weight: 300;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.conteudo-sacola {
+    flex: 1;
+    overflow-y: auto;
+    padding: 18px 0;
+}
+
+.sacola-vazia {
+    color: #6f6f6f;
+    font-size: 14px;
+}
+
+.lista-sacola {
+    display: grid;
+    gap: 16px;
+    list-style: none;
+}
+
+.item-sacola {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 8px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.item-sacola-nome {
+    font-weight: 600;
+}
+
+.item-sacola-preco {
+    margin-top: 4px;
+    color: #555555;
+    font-size: 14px;
+}
+
+.item-sacola-acoes {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.item-sacola-controle {
+    width: 28px;
+    height: 28px;
+    border: 1px solid #cfcfcf;
+    border-radius: 50%;
+    background: #ffffff;
+    cursor: pointer;
+}
+
+.item-sacola-remover {
+    grid-column: 1 / -1;
+    justify-self: start;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: #7a5a00;
+    font-size: 13px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.rodape-sacola {
+    padding-top: 16px;
+    border-top: 1px solid #e5e5e5;
+}
+
+.resumo-sacola {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    font-size: 18px;
+}
+
+.botao-checkout {
+    width: 200px;
+    padding: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.botao-checkout:disabled {
+    cursor: not-allowed;
+}
+
+body.sacola-aberta {
+    overflow: hidden;
+}
+
+@media (max-width: 480px) {
+    .painel-sacola {
+        width: 100%;
+    }
+}

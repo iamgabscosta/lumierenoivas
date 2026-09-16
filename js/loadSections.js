@@ -56,6 +56,7 @@ async function carregarSecao(link, atualizarHistorico = true) {
             </section>
         `;
         configurarCamposIndicacao();
+        window.configurarMinhaConta?.();
 
         linksDeSecao.forEach((item) => item.removeAttribute('aria-current'));
         link.setAttribute('aria-current', 'page');
