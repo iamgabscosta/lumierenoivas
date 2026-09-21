@@ -31,6 +31,8 @@ async function carregarSecao(link, atualizarHistorico = true) {
     const arquivo = link.dataset.section;
     const titulo = link.querySelector('img')?.alt || link.textContent.trim();
     const paginaSemBarra = [
+        '#contato',
+        '#minhaconta',
         '#politicaprivacidade',
         '#termosdeuso',
         '#comprasentregas',
@@ -49,12 +51,14 @@ async function carregarSecao(link, atualizarHistorico = true) {
 
         const html = await resposta.text();
         window.scrollTo(0, 0);
+        conteudoPrincipal.classList.remove('section-visible');
         conteudoPrincipal.innerHTML = html.trim() || `
             <section class="secao-vazia">
                 <h1>${titulo}</h1>
                 <p>Conteúdo em breve.</p>
             </section>
         `;
+        requestAnimationFrame(() => conteudoPrincipal.classList.add('section-visible'));
         configurarCamposIndicacao();
         window.configurarMinhaConta?.();
 

@@ -50,3 +50,23 @@
 .lista-termos li {
     padding-left: 0px;
 }
+
+.titulotermos {
+    width: var(--content-width);
+    margin: 0 auto;
+    padding-bottom: 18px;
+    border-color: var(--line);
+    font-size: clamp(3rem, 5vw, 5rem);
+    line-height: 0.95;
+}
+
+.conteudo-termos {
+    width: var(--content-width);
+    gap: 14px;
+    margin: 26px auto 80px;
+}
+
+.conteudo-termos p,
+.lista-termos { line-height: 1.75; }
+
+.titulo { margin: 28px 0 4px; font-size: clamp(1.8rem, 2.5vw, 2.4rem); }
