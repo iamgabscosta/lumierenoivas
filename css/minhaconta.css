@@ -285,9 +285,10 @@
 }
 
 .form-conta button:not(.link-conta) {
-    width: auto;
-    min-width: 170px;
-    padding: 13px 20px;
+    justify-self: start;
+    width: 130px;
+    min-width: 0;
+    padding: 9px 14px;
     border: 1px solid var(--graphite);
     border-radius: 0;
     background: transparent;

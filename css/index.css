@@ -228,8 +228,8 @@ body {
     --graphite: #292824;
     --muted: #716d65;
     --line: #dfdbd1;
-    --display: "Cormorant Garamond", Georgia, serif;
-    --body: "Inter", Arial, sans-serif;
+    --display: "Playfair Display", Georgia, serif;
+    --body: "Outfit", Arial, sans-serif;
     --content-width: min(1400px, calc(100% - 64px));
 }
 
@@ -250,6 +250,21 @@ h1, h2, h3 {
     color: var(--graphite);
     font-weight: 600;
     letter-spacing: 0.025em;
+}
+
+/* Garante Playfair Display nos títulos carregados dinamicamente. */
+.titulocontato,
+.titulopolitica,
+.titulotermos,
+.titulocompras,
+.titulotrocas,
+.minha-conta > h1,
+.titulo,
+.tituloformulario,
+.titulolocalizacao,
+.tituloredesocial,
+.cartao-conta h2 {
+    font-family: "Playfair Display", Georgia, serif;
 }
 
 .navbar {
