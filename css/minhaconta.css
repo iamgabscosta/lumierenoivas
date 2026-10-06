@@ -230,3 +230,86 @@
         border-left: 0;
     }
 }
+
+/* Conta alinhada ao mesmo grid das páginas institucionais. */
+.minha-conta {
+    width: var(--content-width);
+    margin: 0 auto 80px;
+}
+
+.minha-conta > h1 {
+    margin-bottom: 40px;
+    padding-bottom: 18px;
+    border-color: var(--line);
+    font-size: clamp(3rem, 5vw, 5rem);
+    line-height: 0.95;
+}
+
+.contas-colunas { gap: clamp(48px, 7vw, 120px); }
+
+.cartao-conta + .cartao-conta {
+    padding-left: clamp(36px, 5vw, 80px);
+    border-color: var(--line);
+}
+
+.cartao-conta h2 { font-size: clamp(2rem, 3vw, 2.65rem); }
+
+.cartao-conta > p,
+.mensagem-conta { color: var(--muted); }
+
+.form-conta { gap: 22px; }
+.form-conta > div { gap: 4px; }
+
+.form-conta label:not(.lembrar-conta) {
+    font-size: 0.6875rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.form-conta input:not([type="checkbox"]) {
+    width: min(100%, 420px);
+    min-height: 0;
+    padding: 10px 0;
+    border: 0;
+    border-bottom: 1px solid var(--line);
+    border-radius: 0;
+    background: transparent;
+    color: var(--graphite);
+    transition: border-color 0.6s ease;
+}
+
+.form-conta input:focus {
+    border-color: var(--champagne-dark);
+    outline: none;
+}
+
+.form-conta button:not(.link-conta) {
+    justify-self: start;
+    width: 130px;
+    min-width: 0;
+    padding: 9px 14px;
+    border: 1px solid var(--graphite);
+    border-radius: 0;
+    background: transparent;
+    color: var(--graphite);
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    transition: background-color 0.6s ease, color 0.6s ease;
+}
+
+.form-conta button:not(.link-conta):not(:disabled):hover {
+    background: var(--graphite);
+    color: var(--paper);
+}
+
+@media (max-width: 720px) {
+    .cartao-conta + .cartao-conta {
+        padding-top: 40px;
+        padding-left: 0;
+        border-top: 1px solid var(--line);
+        border-left: 0;
+    }
+}
