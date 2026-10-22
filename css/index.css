@@ -244,6 +244,7 @@ body {
     font-size: 0.9375rem;
     line-height: 1.7;
     letter-spacing: 0.01em;
+    overflow-x: hidden;
 }
 
 h1, h2, h3 {
@@ -558,6 +559,119 @@ h1, h2, h3 {
     .navbar-links { gap: 9px 14px; }
     .footer-conteudo { grid-template-columns: 1fr; }
     .footer-marca { padding-top: 0; }
+}
+
+/* Galaxy A56 and other compact phones use a 412px CSS viewport. */
+@media (max-width: 430px) {
+    section { scroll-margin-top: 124px; }
+
+    .navbar {
+        min-height: 0;
+        row-gap: 10px;
+    }
+
+    .navbar-acoes {
+        min-width: 0;
+    }
+
+    .barrapesquisa {
+        width: min(170px, calc(100vw - 160px));
+    }
+
+    .campopesquisa {
+        padding-left: 10px;
+        font-size: 0.6875rem;
+    }
+
+    .navbar-links {
+        gap: 8px 12px;
+        padding-top: 2px;
+    }
+
+    .navbar-links a {
+        font-size: 0.5625rem;
+        letter-spacing: 0.08em;
+    }
+
+    #conteudoPrincipal {
+        min-height: calc(100svh - 118px);
+        padding-top: 36px;
+        padding-bottom: 56px;
+    }
+
+    .footer {
+        padding-right: 16px;
+        padding-left: 16px;
+    }
+
+    .footer-conteudo {
+        grid-template-columns: 1fr;
+        width: 100%;
+        row-gap: 22px;
+    }
+
+    .footer-marca,
+    .footer-atendimento {
+        grid-column: 1 / -1;
+    }
+
+    .footer-marca {
+        justify-content: center;
+        padding-bottom: 2px;
+    }
+
+    .footer-coluna {
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-coluna h2,
+    .footer-coluna a,
+    .footer-coluna p {
+        text-align: center;
+    }
+
+    .footer-redes {
+        justify-content: center;
+    }
+
+    .footer-coluna h2 {
+        margin-bottom: 4px;
+        font-size: 1.15rem;
+    }
+
+    .footer-coluna a,
+    .footer-coluna p {
+        font-size: 0.9375rem;
+    }
+
+    .footer-base {
+        align-items: center;
+        margin-top: 14px;
+        font-size: 0.8125rem;
+        text-align: center;
+    }
+
+    .footer-base span {
+        max-width: 100%;
+        text-wrap: balance;
+    }
+
+    .footer-base span:first-child {
+        max-width: 340px;
+    }
+
+    .footer-direitos {
+        max-width: 100%;
+    }
+
+    .footer-empresa {
+        white-space: nowrap;
+    }
+
+    .footer-reservados {
+        display: block;
+    }
 }
 
 @media (prefers-reduced-motion: reduce) {
