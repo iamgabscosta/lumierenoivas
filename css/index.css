@@ -274,7 +274,7 @@ h1, h2, h3 {
     padding: 15px max(32px, calc((100% - 1400px) / 2));
     background: rgba(255, 254, 253, 0.94);
     border-bottom: 1px solid rgba(223, 219, 209, 0.75);
-    box-shadow: none;
+    box-shadow: 0 5px 14px rgba(41, 40, 36, 0.12);
     backdrop-filter: blur(14px);
 }
 
@@ -371,6 +371,48 @@ h1, h2, h3 {
     padding: clamp(32px, 3vw, 56px) 0;
 }
 
+.home-video {
+    width: 100%;
+    margin: calc(-1 * clamp(32px, 3vw, 56px)) auto 0;
+    overflow: hidden;
+    background: transparent;
+}
+
+.home-video-media {
+    display: block;
+    width: 100%;
+    height: min(68vh, 760px);
+    min-height: 360px;
+    object-fit: cover;
+    background: var(--graphite);
+}
+
+.home-video-title {
+    margin: 36px 20px 0;
+    font-family: var(--body);
+    color: var(--graphite);
+    font-size: clamp(1.75rem, 3.5vw, 3rem);
+    line-height: 1.2;
+    letter-spacing: 0.08em;
+    text-align: center;
+    text-wrap: balance;
+    word-spacing: 0.14em;
+}
+
+.home-video > p {
+    margin: 6px auto 0;
+    width: min(100% - 40px, 760px);
+    color: var(--graphite);
+    font-size: 1.05rem;
+    line-height: 1.45;
+    text-align: center;
+    text-wrap: balance;
+}
+
+.home-video-title + p {
+    margin-top: 26px;
+}
+
 #conteudoPrincipal.section-visible > section {
     animation: section-reveal 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
@@ -405,7 +447,7 @@ h1, h2, h3 {
     display: grid;
     grid-template-columns: 1fr 1.25fr 1.25fr 1.6fr 2.1fr;
     gap: clamp(24px, 4vw, 64px);
-    width: var(--content-width);
+    width: min(1400px, 100%);
     margin: 0 auto;
     min-height: 150px;
 }
@@ -413,7 +455,7 @@ h1, h2, h3 {
 .footer-marca {
     display: flex;
     align-items: flex-start;
-    justify-content: center;
+    justify-content: flex-start;
     padding-top: 12px;
 }
 
@@ -597,6 +639,31 @@ h1, h2, h3 {
         min-height: calc(100svh - 118px);
         padding-top: 36px;
         padding-bottom: 56px;
+    }
+
+    .home-video-media {
+        height: auto;
+        min-height: 0;
+        aspect-ratio: 9 / 16;
+    }
+
+    .home-video {
+        margin-top: -36px;
+    }
+
+    .home-video-title {
+        margin: 28px 16px 0;
+        font-size: clamp(1.55rem, 7.5vw, 2.1rem);
+    }
+
+    .home-video > p {
+        width: calc(100% - 32px);
+        font-size: 0.95rem;
+        line-height: 1.4;
+    }
+
+    .home-video-title + p {
+        margin-top: 20px;
     }
 
     .footer {
