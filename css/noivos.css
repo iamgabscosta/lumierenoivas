@@ -46,6 +46,84 @@ html.tema-noivos .catalogo-noivos-banner + p {
     margin-top: 48px;
 }
 
+html.tema-noivos .catalogo-noivos-grade {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px;
+    margin-top: 74px;
+}
+
+html.tema-noivos .catalogo-noivos-item {
+    overflow: hidden;
+    background: #050505;
+}
+
+html.tema-noivos .catalogo-noivos-foto {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+}
+
+html.tema-noivos .catalogo-noivos-acoes {
+    display: flex;
+    gap: 8px;
+    padding-top: 12px;
+}
+
+html.tema-noivos .catalogo-noivos-botao {
+    flex: 1;
+    min-height: 38px;
+    padding: 8px 10px;
+    border: 1px solid #ffffff;
+    background: transparent;
+    color: #ffffff;
+    cursor: pointer;
+    font-family: var(--body);
+    font-size: 0.6875rem;
+    letter-spacing: 0.04em;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+html.tema-noivos .catalogo-noivos-botao:hover,
+html.tema-noivos .catalogo-noivos-botao:focus-visible {
+    background: #ffffff;
+    color: #000000;
+    outline: none;
+}
+
+html.tema-noivos .catalogo-noivos-botao-comprar {
+    background: #ffffff;
+    color: #000000;
+}
+
+html.tema-noivos .catalogo-noivos-botao-sacola.adicionado {
+    border-color: #b7e4c7;
+    background: #b7e4c7;
+    color: #000000;
+}
+
+html.tema-noivos .catalogo-noivos-botao-comprar:hover,
+html.tema-noivos .catalogo-noivos-botao-comprar:focus-visible {
+    background: transparent;
+    color: #ffffff;
+}
+
+html.tema-noivos .catalogo-noivos-placeholder {
+    display: grid;
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    place-items: center;
+    border: 1px dashed rgba(255, 255, 255, 0.45);
+    color: #ffffff;
+    font-family: var(--body);
+    font-size: 0.6875rem;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-align: center;
+    text-transform: uppercase;
+}
+
 html.tema-noivos .catalogo-breadcrumb a {
     color: #ffffff;
     text-decoration: none;
@@ -99,6 +177,10 @@ html.tema-noivos .catalogo-cta-secundario {
     html.tema-noivos .catalogo-noivos-acoes {
         justify-content: start;
     }
+
+    html.tema-noivos .catalogo-noivos-grade {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
 }
 
 @media (max-width: 520px) {
@@ -113,6 +195,10 @@ html.tema-noivos .catalogo-cta-secundario {
     html.tema-noivos .catalogo-cta {
         flex: 1;
         padding-inline: 12px;
+    }
+
+    html.tema-noivos .catalogo-noivos-grade {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -171,6 +257,12 @@ html.tema-noivos .footer {
     box-shadow: 0 -2px 10px rgba(255, 255, 255, 0.35);
 }
 
+html.tema-noivos .footer-logo-vizzore {
+    display: block !important;
+    height: 52px;
+    width: 52px;
+    object-fit: contain;
+}
 html.tema-noivos .secao-vazia,
 html.tema-noivos .secao-erro {
     background: #000000;

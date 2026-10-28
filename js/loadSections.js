@@ -37,6 +37,21 @@ function configurarCamposIndicacao() {
     atualizarCamposIndicacao();
 }
 
+document.addEventListener('click', (event) => {
+    const botao = event.target.closest('.catalogo-noivos-botao-sacola');
+    if (!botao) return;
+
+    botao.textContent = 'Adicionado à sacola';
+    botao.classList.add('adicionado');
+    botao.setAttribute('aria-label', 'Terno adicionado à sacola');
+
+    window.setTimeout(() => {
+        botao.textContent = 'Adicionar à sacola';
+        botao.classList.remove('adicionado');
+        botao.removeAttribute('aria-label');
+    }, 2200);
+});
+
 async function carregarSecao(link, atualizarHistorico = true) {
     const arquivo = link.dataset.section;
     const titulo = link.hash === '#noivos'
