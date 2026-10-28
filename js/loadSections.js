@@ -1,5 +1,15 @@
 const conteudoPrincipal = document.querySelector('#conteudoPrincipal');
 const linksDeSecao = [...document.querySelectorAll('[data-section]')];
+const logoNavbar = document.querySelector('.navbar-logo img');
+const logoLumiere = 'assets/logo/logo.png';
+const logoVizzore = 'assets/logo/VizzoreLogo.png';
+
+function atualizarLogoNavbar(ehNoivos) {
+    if (!logoNavbar) return;
+
+    logoNavbar.src = ehNoivos ? logoVizzore : logoLumiere;
+    logoNavbar.alt = ehNoivos ? 'Logo Vizzore' : 'Logo Lumière Noivas';
+}
 
 function configurarCamposIndicacao() {
     const origemContato = conteudoPrincipal.querySelector('#ondevoceconheceLumiere');
@@ -29,7 +39,9 @@ function configurarCamposIndicacao() {
 
 async function carregarSecao(link, atualizarHistorico = true) {
     const arquivo = link.dataset.section;
-    const titulo = link.querySelector('img')?.alt || link.textContent.trim();
+    const titulo = link.hash === '#noivos'
+        ? 'Noivos'
+        : link.querySelector('img')?.alt || link.textContent.trim();
     const paginaSemBarra = [
         '#contato',
         '#minhaconta',
@@ -39,6 +51,9 @@ async function carregarSecao(link, atualizarHistorico = true) {
         '#trocasdevolucoes'
     ].includes(link.hash);
 
+    const ehNoivos = link.hash === '#noivos';
+    document.documentElement.classList.toggle('tema-noivos', ehNoivos);
+    atualizarLogoNavbar(ehNoivos);
     document.documentElement.classList.toggle('pagina-sem-scrollbar', paginaSemBarra);
     conteudoPrincipal.setAttribute('aria-busy', 'true');
 

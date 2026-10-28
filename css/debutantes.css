@@ -1,0 +1,144 @@
+.catalogo-debutantes {
+    width: var(--content-width);
+    margin: -50px auto 80px;
+}
+
+.catalogo-debutantes-cabecalho {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 32px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: 0;
+}
+
+.catalogo-breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin-bottom: 0;
+    color: var(--muted);
+    font-size: 0.875rem;
+    letter-spacing: 0.04em;
+}
+
+.catalogo-breadcrumb a {
+    color: var(--champagne-dark);
+    text-decoration: none;
+    transition: color 0.6s ease;
+}
+
+.catalogo-breadcrumb a:hover {
+    color: var(--graphite);
+}
+
+.catalogo-debutantes-banner {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-top: 0;
+    object-fit: cover;
+}
+
+.catalogo-debutantes > p {
+    width: min(100% - 80px, 700px);
+    margin: 0 auto;
+    color: var(--graphite);
+    font-family: var(--body);
+    font-size: 22px;
+    line-height: 1.35;
+    text-align: center;
+    text-wrap: balance;
+}
+
+.catalogo-debutantes-banner + p {
+    margin-top: 48px;
+}
+
+.catalogo-debutantes h1 {
+    font-size: clamp(3rem, 5vw, 5rem);
+    line-height: 0.95;
+}
+
+.catalogo-debutantes-acoes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
+    gap: 12px;
+}
+
+.catalogo-debutantes-grade {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: clamp(16px, 2vw, 30px);
+}
+
+.catalogo-debutantes-item {
+    overflow: hidden;
+    background: var(--ivory);
+}
+
+.catalogo-debutantes-placeholder {
+    display: grid;
+    min-height: 100%;
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    place-items: center;
+    border: 1px dashed var(--line);
+    background: linear-gradient(135deg, #f8f6f1, #fdfcf9);
+    color: var(--muted);
+    font-size: 0.625rem;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-align: center;
+    text-transform: uppercase;
+    transition: border-color 0.6s ease, background-color 0.6s ease;
+}
+
+.catologo-debutantes-banner{
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-top: 0;
+    object-fit: cover;
+}
+
+.catalogo-debutantes-item:hover .catalogo-debutantes-placeholder {
+    border-color: var(--champagne-dark);
+    background: var(--ivory);
+}
+
+@media (max-width: 800px) {
+    .catalogo-debutantes-cabecalho {
+        align-items: start;
+        flex-direction: column;
+    }
+
+    .catalogo-debutantes-acoes {
+        justify-content: start;
+    }
+
+    .catalogo-debutantes-grade {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 520px) {
+    .catalogo-debutantes {
+        margin-bottom: 48px;
+    }
+
+    .catalogo-debutantes-cabecalho {
+        margin-bottom: 0;
+    }
+
+    .catalogo-debutantes-grade {
+        grid-template-columns: 1fr;
+    }
+
+    .catalogo-cta {
+        flex: 1;
+        padding-inline: 12px;
+    }
+}
