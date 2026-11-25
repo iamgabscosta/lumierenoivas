@@ -4,11 +4,11 @@ const logoNavbar = document.querySelector('.navbar-logo img');
 const logoLumiere = 'assets/logo/logo.png';
 const logoVizzore = 'assets/logo/VizzoreLogo.png';
 
-function atualizarLogoNavbar(ehNoivos) {
+function atualizarLogoNavbar(ehTernos) {
     if (!logoNavbar) return;
 
-    logoNavbar.src = ehNoivos ? logoVizzore : logoLumiere;
-    logoNavbar.alt = ehNoivos ? 'Logo Vizzore' : 'Logo Lumière Noivas';
+    logoNavbar.src = ehTernos ? logoVizzore : logoLumiere;
+    logoNavbar.alt = ehTernos ? 'Logo Vizzore' : 'Logo Lumière Noivas';
 }
 
 function configurarCamposIndicacao() {
@@ -38,7 +38,7 @@ function configurarCamposIndicacao() {
 }
 
 document.addEventListener('click', (event) => {
-    const botao = event.target.closest('.catalogo-noivos-botao-sacola');
+    const botao = event.target.closest('.catalogo-ternos-botao-sacola');
     if (!botao) return;
 
     botao.textContent = 'Adicionado à sacola';
@@ -54,8 +54,8 @@ document.addEventListener('click', (event) => {
 
 async function carregarSecao(link, atualizarHistorico = true) {
     const arquivo = link.dataset.section;
-    const titulo = link.hash === '#noivos'
-        ? 'Noivos'
+    const titulo = link.hash === '#ternos'
+        ? 'Ternos'
         : link.querySelector('img')?.alt || link.textContent.trim();
     const paginaSemBarra = [
         '#contato',
@@ -66,9 +66,9 @@ async function carregarSecao(link, atualizarHistorico = true) {
         '#trocasdevolucoes'
     ].includes(link.hash);
 
-    const ehNoivos = link.hash === '#noivos';
-    document.documentElement.classList.toggle('tema-noivos', ehNoivos);
-    atualizarLogoNavbar(ehNoivos);
+    const ehTernos = link.hash === '#ternos';
+    document.documentElement.classList.toggle('tema-ternos', ehTernos);
+    atualizarLogoNavbar(ehTernos);
     document.documentElement.classList.toggle('pagina-sem-scrollbar', paginaSemBarra);
     conteudoPrincipal.setAttribute('aria-busy', 'true');
 

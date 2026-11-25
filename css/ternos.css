@@ -1,9 +1,9 @@
-html.tema-noivos .catalogo-noivos {
+html.tema-ternos .catalogo-ternos {
     width: var(--content-width);
     margin: -50px auto 80px;
 }
 
-html.tema-noivos .catalogo-noivos-cabecalho {
+html.tema-ternos .catalogo-ternos-cabecalho {
     display: flex;
     align-items: end;
     justify-content: space-between;
@@ -13,7 +13,7 @@ html.tema-noivos .catalogo-noivos-cabecalho {
     border-bottom: 0;
 }
 
-html.tema-noivos .catalogo-breadcrumb {
+html.tema-ternos .catalogo-breadcrumb {
     display: flex;
     align-items: center;
     gap: 9px;
@@ -23,7 +23,7 @@ html.tema-noivos .catalogo-breadcrumb {
     letter-spacing: 0.04em;
 }
 
-.catalogo-noivos-banner{
+.catalogo-ternos-banner{
     display: block;
     width: 100%;
     height: auto;
@@ -31,7 +31,7 @@ html.tema-noivos .catalogo-breadcrumb {
     object-fit: cover;
 }
 
-html.tema-noivos .catalogo-noivos > p {
+html.tema-ternos .catalogo-ternos > p {
     width: min(100% - 80px, 700px);
     margin: 0 auto;
     color: #ffffff;
@@ -42,36 +42,36 @@ html.tema-noivos .catalogo-noivos > p {
     text-wrap: balance;
 }
 
-html.tema-noivos .catalogo-noivos-banner + p {
+html.tema-ternos .catalogo-ternos-banner + p {
     margin-top: 48px;
 }
 
-html.tema-noivos .catalogo-noivos-grade {
+html.tema-ternos .catalogo-ternos-grade {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 28px;
     margin-top: 74px;
 }
 
-html.tema-noivos .catalogo-noivos-item {
+html.tema-ternos .catalogo-ternos-item {
     overflow: hidden;
     background: #050505;
 }
 
-html.tema-noivos .catalogo-noivos-foto {
+html.tema-ternos .catalogo-ternos-foto {
     display: block;
     width: 100%;
     aspect-ratio: 4 / 5;
     object-fit: cover;
 }
 
-html.tema-noivos .catalogo-noivos-acoes {
+html.tema-ternos .catalogo-ternos-acoes {
     display: flex;
     gap: 8px;
     padding-top: 12px;
 }
 
-html.tema-noivos .catalogo-noivos-botao {
+html.tema-ternos .catalogo-ternos-botao {
     flex: 1;
     min-height: 38px;
     padding: 8px 10px;
@@ -85,31 +85,31 @@ html.tema-noivos .catalogo-noivos-botao {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-html.tema-noivos .catalogo-noivos-botao:hover,
-html.tema-noivos .catalogo-noivos-botao:focus-visible {
+html.tema-ternos .catalogo-ternos-botao:hover,
+html.tema-ternos .catalogo-ternos-botao:focus-visible {
     background: #ffffff;
     color: #000000;
     outline: none;
 }
 
-html.tema-noivos .catalogo-noivos-botao-comprar {
+html.tema-ternos .catalogo-ternos-botao-comprar {
     background: #ffffff;
     color: #000000;
 }
 
-html.tema-noivos .catalogo-noivos-botao-sacola.adicionado {
+html.tema-ternos .catalogo-ternos-botao-sacola.adicionado {
     border-color: #b7e4c7;
     background: #b7e4c7;
     color: #000000;
 }
 
-html.tema-noivos .catalogo-noivos-botao-comprar:hover,
-html.tema-noivos .catalogo-noivos-botao-comprar:focus-visible {
+html.tema-ternos .catalogo-ternos-botao-comprar:hover,
+html.tema-ternos .catalogo-ternos-botao-comprar:focus-visible {
     background: transparent;
     color: #ffffff;
 }
 
-html.tema-noivos .catalogo-noivos-placeholder {
+html.tema-ternos .catalogo-ternos-placeholder {
     display: grid;
     width: 100%;
     aspect-ratio: 4 / 5;
@@ -124,30 +124,30 @@ html.tema-noivos .catalogo-noivos-placeholder {
     text-transform: uppercase;
 }
 
-html.tema-noivos .catalogo-breadcrumb a {
+html.tema-ternos .catalogo-breadcrumb a {
     color: #ffffff;
     text-decoration: none;
 }
 
-html.tema-noivos .catalogo-noivos h1 {
+html.tema-ternos .catalogo-ternos h1 {
     color: #ffffff;
     font-size: clamp(3rem, 5vw, 5rem);
     line-height: 0.95;
 }
 
-html.tema-noivos .destaque-frase {
+html.tema-ternos .destaque-frase {
     font-family: var(--display);
     font-style: italic;
 }
 
-html.tema-noivos .catalogo-noivos-acoes {
+html.tema-ternos .catalogo-ternos-acoes {
     display: flex;
     flex-wrap: wrap;
     justify-content: end;
     gap: 12px;
 }
 
-html.tema-noivos .catalogo-cta {
+html.tema-ternos .catalogo-cta {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -163,115 +163,115 @@ html.tema-noivos .catalogo-cta {
     text-transform: uppercase;
 }
 
-html.tema-noivos .catalogo-cta-secundario {
+html.tema-ternos .catalogo-cta-secundario {
     background: transparent;
     color: #ffffff;
 }
 
 @media (max-width: 800px) {
-    html.tema-noivos .catalogo-noivos-cabecalho {
+    html.tema-ternos .catalogo-ternos-cabecalho {
         align-items: start;
         flex-direction: column;
     }
 
-    html.tema-noivos .catalogo-noivos-acoes {
+    html.tema-ternos .catalogo-ternos-acoes {
         justify-content: start;
     }
 
-    html.tema-noivos .catalogo-noivos-grade {
+    html.tema-ternos .catalogo-ternos-grade {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
 
 @media (max-width: 520px) {
-    html.tema-noivos .catalogo-noivos {
+    html.tema-ternos .catalogo-ternos {
         margin-bottom: 48px;
     }
 
-    html.tema-noivos .catalogo-noivos-cabecalho {
+    html.tema-ternos .catalogo-ternos-cabecalho {
         margin-bottom: 0;
     }
 
-    html.tema-noivos .catalogo-cta {
+    html.tema-ternos .catalogo-cta {
         flex: 1;
         padding-inline: 12px;
     }
 
-    html.tema-noivos .catalogo-noivos-grade {
+    html.tema-ternos .catalogo-ternos-grade {
         grid-template-columns: 1fr;
     }
 }
 
-html.tema-noivos,
-html.tema-noivos body {
+html.tema-ternos,
+html.tema-ternos body {
     background: #000000;
     color: #ffffff;
 }
 
-html.tema-noivos .navbar,
-html.tema-noivos #conteudoPrincipal,
-html.tema-noivos .footer {
+html.tema-ternos .navbar,
+html.tema-ternos #conteudoPrincipal,
+html.tema-ternos .footer {
     background: #000000;
     color: #ffffff;
     box-shadow: none;
 }
 
-html.tema-noivos .navbar {
+html.tema-ternos .navbar {
     border-bottom: 0;
     box-shadow: 0 2px 10px rgba(255, 255, 255, 0.35);
 }
 
-html.tema-noivos .navbar a,
-html.tema-noivos .navbar button,
-html.tema-noivos .navbar input,
-html.tema-noivos .footer,
-html.tema-noivos .footer a,
-html.tema-noivos .footer h2,
-html.tema-noivos .footer p,
-html.tema-noivos #conteudoPrincipal {
+html.tema-ternos .navbar a,
+html.tema-ternos .navbar button,
+html.tema-ternos .navbar input,
+html.tema-ternos .footer,
+html.tema-ternos .footer a,
+html.tema-ternos .footer h2,
+html.tema-ternos .footer p,
+html.tema-ternos #conteudoPrincipal {
     color: #ffffff;
 }
 
-html.tema-noivos .footer-base,
-html.tema-noivos .footer-base span {
+html.tema-ternos .footer-base,
+html.tema-ternos .footer-base span {
     color: #ffffff;
 }
 
-html.tema-noivos .campopesquisa {
+html.tema-ternos .campopesquisa {
     border-color: #ffffff;
     color: #ffffff;
 }
 
-html.tema-noivos .campopesquisa::placeholder {
+html.tema-ternos .campopesquisa::placeholder {
     color: #ffffff;
 }
 
-html.tema-noivos .icone-minhaconta,
-html.tema-noivos .icone-bag,
-html.tema-noivos .botaopesquisa img {
+html.tema-ternos .icone-minhaconta,
+html.tema-ternos .icone-bag,
+html.tema-ternos .botaopesquisa img {
     filter: brightness(0) invert(1);
 }
 
-html.tema-noivos .footer {
+html.tema-ternos .footer {
     border-top-color: #ffffff;
     box-shadow: 0 -2px 10px rgba(255, 255, 255, 0.35);
 }
 
-html.tema-noivos .footer-logo-vizzore {
+html.tema-ternos .footer-logo-vizzore {
     display: block !important;
     height: 52px;
     width: 52px;
     object-fit: contain;
 }
-html.tema-noivos .secao-vazia,
-html.tema-noivos .secao-erro {
+html.tema-ternos .secao-vazia,
+html.tema-ternos .secao-erro {
     background: #000000;
     color: #ffffff;
 }
 
-html.tema-noivos .secao-vazia h1,
-html.tema-noivos .secao-erro h1,
-html.tema-noivos .secao-vazia p,
-html.tema-noivos .secao-erro p {
+html.tema-ternos .secao-vazia h1,
+html.tema-ternos .secao-erro h1,
+html.tema-ternos .secao-vazia p,
+html.tema-ternos .secao-erro p {
     color: #ffffff;
 }
