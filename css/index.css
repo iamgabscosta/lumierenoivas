@@ -515,12 +515,12 @@ h1, h2, h3 {
 }
 
 .home-banner-texto + a .home-banner {
-    margin-top: 144px;
+    margin-top: 96px;
 }
 
 .home-banner-texto {
     width: min(100% - 80px, 700px);
-    margin: 48px auto 0;
+    margin: 96px auto 0;
     color: var(--graphite);
     font-family: var(--body);
     font-size: 22px;
@@ -831,13 +831,13 @@ h1, h2, h3 {
 
     .home-banner-texto {
         width: min(100% - 20px, 360px);
-        margin-top: 48px;
+        margin-top: 96px;
         font-size: 21px;
         line-height: 1.3;
     }
 
     .home-banner-texto + a .home-banner {
-        margin-top: 144px;
+        margin-top: 96px;
     }
 
     .footer {
