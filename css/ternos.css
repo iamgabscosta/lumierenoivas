@@ -42,6 +42,55 @@ html.tema-ternos .catalogo-ternos > p {
     text-wrap: balance;
 }
 
+html.tema-ternos .catalogo-whatsapp {
+    border-color: #ffffff;
+    background: transparent;
+    color: #ffffff;
+}
+
+html.tema-ternos .catalogo-ternos-contato {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 32px;
+}
+
+html.tema-ternos .catalogo-ternos-contato .catalogo-whatsapp {
+    margin: 0;
+}
+
+html.tema-ternos .catalogo-whatsapp:hover,
+html.tema-ternos .catalogo-whatsapp:focus-visible {
+    border-color: var(--champagne-dark);
+    background: var(--champagne);
+    color: #000000;
+}
+
+html.tema-ternos .catalogo-whatsapp:disabled,
+html.tema-ternos .catalogo-whatsapp:disabled:hover {
+    border-color: #ffffff;
+    background: transparent;
+    color: #ffffff;
+    cursor: not-allowed;
+    opacity: 0.65;
+    transform: none;
+    box-shadow: none;
+    outline: none;
+}
+
+html.tema-ternos .catalogo-ternos-status {
+    color: var(--champagne);
+    font-size: 0.65rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+html.tema-ternos .catalogo-whatsapp:active {
+    background: var(--champagne-dark);
+    color: #ffffff;
+}
+
 html.tema-ternos .catalogo-ternos-banner + p {
     margin-top: 48px;
 }
